@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 17:22:38 by fcosta-e          #+#    #+#             */
-/*   Updated: 2023/04/18 19:47:06 by fcosta-e         ###   ########.fr       */
+/*   Created: 2023/04/18 20:19:35 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/04/18 20:20:34 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
-
-size_t ft_strlen(const char *s);
-
-#endif
+int ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+    
+}

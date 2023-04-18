@@ -1,50 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 18:52:00 by fcosta-e          #+#    #+#             */
-/*   Updated: 2023/04/18 19:35:43 by fcosta-e         ###   ########.fr       */
+/*   Created: 2023/04/18 19:34:34 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/04/18 20:16:54 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strchr(const char *s, int c)
+char *ft_strrchr(const char *s, int c)
 {
-    while (*s != '\0')
+    int i;
+
+    i = 0;
+    while (s[i] != '\0')
     {
-        if (*s == (unsigned char)c)
-            return ((char *)s);
-        s++;
+        i++;
+    }
+    while (i >= 0)
+    {
+        if (s[i] == (char)c)
+            return (((char *)s)+i);
+        i--;
     }
     if (c == '\0')
-        return ((char *)s);
+        return (((char *)s)+i);
     return NULL;
+    
 }
-
-char* strchr(const char* str, int c);
 
 int main() {
     char str[] = "hello, World";
     char* result;
     char* resultm;
 
-    result = strchr(str, 'o');
-    resultm = ft_strchr(str, 'o');
+    result = strrchr(str, 'o');
+    resultm = ft_strrchr(str, 'o');
     printf("Primeira ocorrencia de 'o': %s\n", result);
     printf("Primeira ocorrencia de 'o': %s\n", resultm);
 
-    result = strchr(str, 'z');
+    result = strrchr(str, 'z');
     printf("Primeira ocorrencia de 'z': %s\n", result);
-    resultm = ft_strchr(str, 'z');
+    resultm = ft_strrchr(str, 'z');
     printf("Primeira ocorrencia de 'z': %s\n", resultm);
 
-    result = strchr(str, '\0');
+    result = strrchr(str, '\0');
     printf("Final da string: %s\n", result);
-    resultm = ft_strchr(str, '\0');
+    resultm = ft_strrchr(str, '\0');
     printf("Final da string: %s\n", resultm);
 
     return 0;
