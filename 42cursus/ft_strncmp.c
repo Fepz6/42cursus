@@ -6,7 +6,7 @@
 /*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 20:19:35 by fcosta-e          #+#    #+#             */
-/*   Updated: 2023/04/18 21:01:08 by fcosta-e         ###   ########.fr       */
+/*   Updated: 2023/04/22 16:37:54 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+/*
 int main() {
     char str1[] = "Hello, world!";
     char str2[] = "Hell";
@@ -39,13 +40,9 @@ int main() {
     
     if (result == 0) {
         printf("As primeiras %d letras de \"%s\" e \"%s\" sao iguais.\n", n, str1, str2);
-    } else if (result < 0) {
-        printf("As primeiras %d letras de \"%s\" sao menores que as de \"%s\".\n", n, str1, str2);
-    } else {
-        printf("As primeiras %d letras de \"%s\" sao maiores que as de \"%s\".\n", n, str1, str2);
-    }
-    
-     if (resultm == 0) {
+    } el
+#include <ctype.h>
+#include <stdio.h>(resultm == 0) {
         printf("As primeiras %d letras de \"%s\" e \"%s\" sao iguais.\n", n, str1, str2);
     } else if (resultm < 0) {
         printf("As primeiras %d letras de \"%s\" sao menores que as de \"%s\".\n", n, str1, str2);
@@ -53,4 +50,4 @@ int main() {
         printf("As primeiras %d letras de \"%s\" sao maiores que as de \"%s\".\n", n, str1, str2);
     }
     return 0;
-}
+}*/

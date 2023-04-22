@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcosta-e <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 18:12:10 by fcosta-e          #+#    #+#             */
-/*   Updated: 2023/04/12 18:14:05 by fcosta-e         ###   ########.fr       */
+/*   Updated: 2023/04/22 16:38:06 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
@@ -17,8 +19,7 @@ int	ft_tolower(int c)
 	return (c);
 }
 
-#include <stdio.h>
-#include <ctype.h>
+/*
 int main()
 {
     char c, result;
@@ -36,4 +37,4 @@ int main()
     printf("tolower(%c) = %c\n", c, result);
 
     return 0;
-}
+}*/

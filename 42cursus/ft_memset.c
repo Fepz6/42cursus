@@ -6,7 +6,7 @@
 /*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 17:35:36 by fcosta-e          #+#    #+#             */
-/*   Updated: 2023/04/17 18:49:10 by fcosta-e         ###   ########.fr       */
+/*   Updated: 2023/04/22 16:37:22 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,11 @@ void *ft_memset(void *s, int c, size_t n)
     }
     return (s);
 }
+/*
 int main()
 {
   printf("%s\n", "ft_memset");
     char   f[] = "kk";
 	printf("%p\n", ft_memset(f, '$', 2));
     printf("%s\n", "----------------");
-}
+}*/

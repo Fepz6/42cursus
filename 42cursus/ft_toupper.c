@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcosta-e <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 17:52:30 by fcosta-e          #+#    #+#             */
-/*   Updated: 2023/04/12 18:05:26 by fcosta-e         ###   ########.fr       */
+/*   Updated: 2023/04/22 16:38:12 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
@@ -16,9 +18,7 @@ int	ft_toupper(int c)
 		return (c -= 32);
 	return (c);
 }
-
-#include <stdio.h>
-#include <ctype.h>
+/*
 int main() {
     char c;
 
@@ -31,4 +31,4 @@ int main() {
     c = '9';
     printf("\n%c -> %c", c, toupper(c));
     return 0;
-}
+}*/

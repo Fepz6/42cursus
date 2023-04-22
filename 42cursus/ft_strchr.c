@@ -6,7 +6,7 @@
 /*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:52:00 by fcosta-e          #+#    #+#             */
-/*   Updated: 2023/04/18 19:35:43 by fcosta-e         ###   ########.fr       */
+/*   Updated: 2023/04/22 18:14:11 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ char    *ft_strchr(const char *s, int c)
             return ((char *)s);
         s++;
     }
-    if (c == '\0')
+    if (c == 0)
         return ((char *)s);
     return NULL;
 }
-
+/*
 char* strchr(const char* str, int c);
 
 int main() {
@@ -48,4 +48,4 @@ int main() {
     printf("Final da string: %s\n", resultm);
 
     return 0;
-}
+}*/

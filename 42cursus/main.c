@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 15:37:35 by fcosta-e          #+#    #+#             */
-/*   Updated: 2023/04/22 16:34:10 by fcosta-e         ###   ########.fr       */
+/*   Created: 2023/04/22 16:14:19 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/04/22 16:30:22 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
-{
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
-}
-/*#include <stdio.h>
-#include <ctype.h>
 int main()
 {
     char c;
+    int result;
+
+    c = '5';
+    result = ft_isalnum(c);
+    printf("When %c is passed, return value is %d\n", c, result);
+
     c = 'Q';
-    printf("\nResult when uppercase alphabet is passed: %d", ft_isalpha(c));
+    result = ft_isalnum(c);
+    printf("When %c is passed, return value is %d\n", c, result);
 
-    c = 'q';
-    printf("\nResult when lowercase alphabet is passed: %d", isalpha(c));
+    c = 'l';
+    result = ft_isalnum(c);
+    printf("When %c is passed, return value is %d\n", c, result);
 
-    c='+';
-    printf("\nResult when non-alphabetic character is passed: %d", isalpha(c));
+    c = '+';
+    result = ft_isalnum(c);
+    printf("When %c is passed, return value is %d\n", c, result);
 
     return 0;
-}*/
+}

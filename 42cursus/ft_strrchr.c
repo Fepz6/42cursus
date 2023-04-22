@@ -6,7 +6,7 @@
 /*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 19:34:34 by fcosta-e          #+#    #+#             */
-/*   Updated: 2023/04/18 20:16:54 by fcosta-e         ###   ########.fr       */
+/*   Updated: 2023/04/22 16:40:16 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char *ft_strrchr(const char *s, int c)
     return NULL;
     
 }
-
+/*
 int main() {
     char str[] = "hello, World";
     char* result;
@@ -54,4 +54,4 @@ int main() {
     printf("Final da string: %s\n", resultm);
 
     return 0;
-}
+}*/
