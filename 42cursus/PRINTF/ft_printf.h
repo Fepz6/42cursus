@@ -6,7 +6,7 @@
 /*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 17:43:50 by fcosta-e          #+#    #+#             */
-/*   Updated: 2023/09/18 16:51:49 by fcosta-e         ###   ########.fr       */
+/*   Updated: 2023/09/19 12:01:54 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 int ft_printf(const char *fmt, ...);
 int ft_putchar(int c);
 int ft_putstr(char *str);
-int ft_putptr(void *ptr);
+int ft_putptr(unsigned long ptr);
 int ft_putnbr(int n);
 int ft_putunbr(unsigned int n);
 int ft_hexlen(unsigned int num);

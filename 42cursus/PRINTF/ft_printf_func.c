@@ -6,7 +6,7 @@
 /*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 14:07:18 by fcosta-e          #+#    #+#             */
-/*   Updated: 2023/09/18 17:29:59 by fcosta-e         ###   ########.fr       */
+/*   Updated: 2023/09/19 12:01:59 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,37 +35,51 @@ int ft_putstr(char *str)
     return contador;
 }
 
-int ft_putptr(void *ptr)
+int	ft_point_len(unsigned long nbr)
 {
-    unsigned long num = (unsigned long)ptr;
-    char *hex_digits = "0123456789abcdef";
-    write(1, "0x", 2);
+	int	i;
 
-    
-    int count = 0;
-    char buffer[200];
+	i = 0;
+	if (nbr == 0)
+		return (1);
+	while (nbr)
+	{
+		i++;
+		nbr /= 16;
+	}
+	return (i);
+}
 
-    if (num == 0)
-    
-    {
-        write(1, "(nil)", 5);
-        return (5);
-    }
+void	ft_hex_to_str(unsigned long nbr)
+{
+	if (nbr >= 16)
+	{
+		ft_hex_to_str (nbr / 16);
+		ft_hex_to_str (nbr % 16);
+	}
+	else
+	{
+		if (nbr <= 9)
+			ft_putchar(nbr + '0');
+		else
+			ft_putchar(nbr - 10 + 'a');
+	}
+}
 
-    while (num != 0)
-    {
-        buffer[count] = hex_digits[num % 16];
-        num /= 16;
-        count++;
-    }
+int ft_putptr(unsigned long ptr)
+{
+	unsigned int	len;
 
-    while (count > 0)
-    {
-        count--;
-        ft_putchar(buffer[count]);
-    }
-
-    return count;
+	len = 0;
+	if (ptr == 0)
+		len = ft_putstr("(nil)");
+	else
+	{
+		len = ft_putstr("0x");
+		ft_hex_to_str(ptr);
+		len += ft_point_len(ptr);
+	}
+	return (len);
 }
 
 int ft_putnbr(int n)
