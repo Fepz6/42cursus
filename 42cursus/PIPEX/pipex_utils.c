@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "pipex.h"
 // Libera a memória alocada para um array de strings e para o próprio array
 void free_doubleptr(char **ptr)
 {

@@ -14,7 +14,7 @@
 
 int main(int argc, char **argv, char **envp)
 {
-    t_pipex *pipex; /
+    t_pipex *pipex; 
     int i;
     int status;
     
