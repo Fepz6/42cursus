@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: felipesilva <felipesilva@student.42.fr>    +#+  +:+       +#+         #
+#    By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 21:26:58 by felipesilva       #+#    #+#              #
-#    Updated: 2023/12/20 23:09:46 by felipesilva      ###   ########.fr        #
+#    Updated: 2024/01/22 11:48:15 by fcosta-e         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
