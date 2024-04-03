@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felipesilva <felipesilva@student.42.fr>    +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 15:54:44 by felipesilva       #+#    #+#             */
-/*   Updated: 2024/04/03 15:54:45 by felipesilva      ###   ########.fr       */
+/*   Created: 2023/05/24 11:36:30 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/05/24 11:39:10 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-
-int	ft_abs(int i)
+void ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (i < 0)
-		return (-i);
-	return (i);
+    if (lst && new)
+    {
+        new -> next = *lst;
+        *lst = new;
+    }
 }

@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felipesilva <felipesilva@student.42.fr>    +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 15:54:44 by felipesilva       #+#    #+#             */
-/*   Updated: 2024/04/03 15:54:45 by felipesilva      ###   ########.fr       */
+/*   Created: 2023/04/12 17:36:36 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/04/22 16:34:15 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-
-int	ft_abs(int i)
+int	ft_isascii(int a)
 {
-	if (i < 0)
-		return (-i);
-	return (i);
+	if (a >= 0 && a <= 127)
+		return (1);
+	return (0);
 }

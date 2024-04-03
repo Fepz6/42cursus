@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felipesilva <felipesilva@student.42.fr>    +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 15:54:44 by felipesilva       #+#    #+#             */
-/*   Updated: 2024/04/03 15:54:45 by felipesilva      ###   ########.fr       */
+/*   Created: 2023/05/25 11:06:09 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/05/25 11:17:43 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include    "libft.h"
 
-
-int	ft_abs(int i)
+void ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	if (i < 0)
-		return (-i);
-	return (i);
+    t_list *aux;
+
+    if (!lst || !del)
+        return ;
+    while (*lst)
+    {
+        aux = (*lst) -> next;
+        ft_lstdelone(*lst, del);
+        (*lst) = aux;
+    }
 }

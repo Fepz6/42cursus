@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbondoer <pbondoer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: felipesilva <felipesilva@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 19:59:25 by pbondoer          #+#    #+#             */
-/*   Updated: 2016/05/11 01:21:15 by pbondoer         ###   ########.fr       */
+/*   Created: 2024/04/03 15:52:42 by felipesilva       #+#    #+#             */
+/*   Updated: 2024/04/03 15:52:43 by felipesilva      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #ifndef LIBFT_H
 # define LIBFT_H

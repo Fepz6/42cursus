@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_splitdel.c                                      :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbondoer <pbondoer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/24 13:58:56 by pbondoer          #+#    #+#             */
-/*   Updated: 2016/02/26 04:20:57 by pbondoer         ###   ########.fr       */
+/*   Created: 2023/04/26 22:24:26 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/05/23 15:37:42 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_splitdel(char ***split)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	char	**str;
-	int		i;
+    unsigned char *p;
 
-	i = 0;
-	str = *split;
-	while (*str)
-	{
-		ft_strdel(str);
-		i++;
-		str = &(*split)[i];
-	}
-	ft_memdel((void **)split);
-	return (0);
+    p = (unsigned char *)s;
+    c = (unsigned char)c;
+    while (n && *p != c)
+    {
+        ++p;
+        --n;
+    }
+    if (n)
+            return ((void*)p);
+    else
+        return (NULL);
 }

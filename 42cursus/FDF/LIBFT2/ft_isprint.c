@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felipesilva <felipesilva@student.42.fr>    +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 15:54:44 by felipesilva       #+#    #+#             */
-/*   Updated: 2024/04/03 15:54:45 by felipesilva      ###   ########.fr       */
+/*   Created: 2023/04/12 17:43:58 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/04/22 16:37:03 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-
-int	ft_abs(int i)
+int	ft_isprint(int a)
 {
-	if (i < 0)
-		return (-i);
-	return (i);
+	if (a >= ' ' && a <= 126)
+		return (1);
+	return (0);
 }
+
+/*int main()
+{
+   int c;
+   for(c = 1; c <= 127; ++c)
+   	if (ft_isprint(c)!= 0)
+             printf("%c ", c);
+   return 0;
+}*/

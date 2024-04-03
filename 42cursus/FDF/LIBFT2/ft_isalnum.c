@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbondoer <pbondoer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 00:53:42 by pbondoer          #+#    #+#             */
-/*   Updated: 2015/12/02 00:54:32 by pbondoer         ###   ########.fr       */
+/*   Created: 2023/04/12 17:22:02 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/04/22 16:36:34 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_min(int a, int b)
+#include "libft.h" 
+
+int	ft_isalnum(int a)
 {
-	if (a < b)
-		return (a);
-	return (b);
+	if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z') || (a >= '0' && a <= '9'))
+		return (1);
+	return (0);
 }

@@ -6,11 +6,10 @@
 #    By: felipesilva <felipesilva@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 21:26:58 by felipesilva       #+#    #+#              #
-#    Updated: 2023/12/20 23:09:46 by felipesilva      ###   ########.fr        #
+#    Updated: 2024/02/04 23:46:20 by felipesilva      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.ONESHELL:
 .SILENT:
 
 NAME = fdf
@@ -59,3 +58,8 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+leaks: $(NAME)
+	leaks $(NAME)
+
+

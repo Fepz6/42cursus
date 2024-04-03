@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ilerp.c                                         :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbondoer <pbondoer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/11 01:06:57 by pbondoer          #+#    #+#             */
-/*   Updated: 2016/05/11 01:42:28 by pbondoer         ###   ########.fr       */
+/*   Created: 2023/05/16 00:00:05 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/05/16 00:01:09 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-double	ft_ilerp(double val, double first, double second)
+#include "libft.h"
+
+void ft_putendl_fd(char *s, int fd)
 {
-	if (val == first)
-		return (0.0);
-	if (val == second)
-		return (1.0);
-	return ((val - first) / (second - first));
+    int i;
+    
+    i = 0;
+    while (s[i] != '\0')
+    {
+        write (fd, &s[i], 1);
+        i++;
+    }
+    write (fd, "\n", 1);
 }
