@@ -3,14 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbondoer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 20:10:56 by pbondoer          #+#    #+#             */
-/*   Updated: 2015/11/24 20:13:39 by pbondoer         ###   ########.fr       */
+/*   Created: 2023/04/12 16:00:46 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/04/22 16:36:54 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+int	ft_isdigit(int i)
 {
-	return (c >= '0' && c <= '9');
+	if (i >= '0' && i <= '9')
+		return (1);
+	return (0);
 }
+
+/*int main()
+{
+    char c;
+    c='5';
+    printf("Result when numeric character is passed: %d", ft_isdigit(c));
+
+    c='+';
+    printf("\nResult when non-numeric character is passed: %d", ft_isdigit(c));
+
+    return 0;
+}*/

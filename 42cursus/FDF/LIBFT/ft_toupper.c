@@ -3,16 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbondoer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 19:52:50 by pbondoer          #+#    #+#             */
-/*   Updated: 2015/11/24 20:08:51 by pbondoer         ###   ########.fr       */
+/*   Created: 2023/04/12 17:52:30 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/04/22 16:38:12 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return ((c - 'a') + 'A');
+		return (c -= 32);
 	return (c);
 }
+/*
+int main() {
+    char c;
+
+    c = 'm';
+    printf("%c -> %c", c, ft_toupper(c));
+
+    c = 'D';
+    printf("\n%c -> %c", c, toupper(c));
+
+    c = '9';
+    printf("\n%c -> %c", c, toupper(c));
+    return 0;
+}*/

@@ -3,28 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbondoer <pbondoer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 03:31:41 by pbondoer          #+#    #+#             */
-/*   Updated: 2015/12/04 03:12:39 by pbondoer         ###   ########.fr       */
+/*   Created: 2023/05/16 00:27:43 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/05/16 00:38:37 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include    "libft.h"
 
-char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*new;
-	unsigned int	i;
+    char    *aux;
+    unsigned int    i;
 
-	i = 0;
-	new = ft_strnew(ft_strlen(s));
-	if (new == NULL)
-		return (NULL);
-	while (s[i])
-	{
-		new[i] = (*f)(i, s[i]);
-		i++;
-	}
-	return (new);
+    i = 0;
+    aux = malloc(sizeof(char) * (ft_strlen(s) + 1));
+    if (!aux)
+        return (NULL);
+    if (!s || !f)
+        return (NULL);
+    while (s[i] != '\0')
+    {
+        aux[i] = (*f)(i, s[i]);
+        i++;
+    }
+    aux[i] = '\0';
+    return (aux);
 }

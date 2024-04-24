@@ -3,38 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbondoer <pbondoer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 23:09:02 by pbondoer          #+#    #+#             */
-/*   Updated: 2015/12/11 21:16:48 by pbondoer         ###   ########.fr       */
+/*   Created: 2023/04/22 14:31:15 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/04/22 16:37:16 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void   *ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t i;
-
-	if (dst == NULL || src == NULL || len == 0)
-		return (dst);
-	if (src < dst)
-	{
-		i = len;
-		while (i > 0)
-		{
-			i--;
-			((char *)dst)[i] = ((char *)src)[i];
-		}
-	}
-	else
-	{
-		i = 0;
-		while (i < len)
-		{
-			((char *)dst)[i] = ((char *)src)[i];
-			i++;
-		}
-	}
-	return (dst);
+    unsigned char   *d;
+    const unsigned char *s;
+    
+    d = (unsigned char *)dest;
+    s = (unsigned char *)src;
+    if (!dest && !src)
+        return (dest);
+    if (d < s)
+    {
+        while (n--)
+            *d++ = *s++;
+        return (dest);
+    }
+    else
+    {
+        while (n--)
+            d[n] = s[n];
+    }
+    return (dest);
 }
+/*
+int main ()
+{
+  char str[20] = "hello, world";
+  char str2[15] = "   ";
+  printf("str %s\n", str);
+  printf("str2 %s\n", str2);
+  ft_memmove(str2, str, 5);
+	
+    printf("str %s\n", str);  
+    printf("str2 %s\n", str2);
+ return 0;
+}*/

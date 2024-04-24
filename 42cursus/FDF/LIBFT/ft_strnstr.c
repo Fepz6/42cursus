@@ -3,32 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbondoer <pbondoer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 00:32:11 by pbondoer          #+#    #+#             */
-/*   Updated: 2016/01/08 01:30:00 by pbondoer         ###   ########.fr       */
+/*   Created: 2023/04/28 12:59:43 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/05/02 10:11:38 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t n)
+char    *ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t i;
-	size_t j;
+    size_t  i;
 
-	if (*s2 == '\0')
-		return ((char *)s1);
-	i = 0;
-	while (s1[i] && i < n)
-	{
-		j = 0;
-		while (s1[i + j] && i + j < n && s2[j] && s1[i + j] == s2[j])
-			j++;
-		if (s2[j] == '\0')
-			return ((char *)(s1 + i));
-		i++;
-	}
-	return (NULL);
+    if (*little == 0)
+        return ((char *)big);
+    if (len == 0)
+        return (0);
+    i = ft_strlen(little);
+        while (*big && i <= len)
+        {
+            if (*big == *little && ft_strncmp(big, little, i) == 0)
+            {
+                return ((char *)big);
+            }
+            ++big;
+            --len;
+        }
+    return (NULL);
 }

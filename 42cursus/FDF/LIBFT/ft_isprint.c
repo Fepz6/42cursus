@@ -3,14 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbondoer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 20:26:04 by pbondoer          #+#    #+#             */
-/*   Updated: 2015/11/24 20:27:28 by pbondoer         ###   ########.fr       */
+/*   Created: 2023/04/12 17:43:58 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/04/22 16:37:03 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+int	ft_isprint(int a)
 {
-	return (c >= 32 && c <= 126);
+	if (a >= ' ' && a <= 126)
+		return (1);
+	return (0);
 }
+
+/*int main()
+{
+   int c;
+   for(c = 1; c <= 127; ++c)
+   	if (ft_isprint(c)!= 0)
+             printf("%c ", c);
+   return 0;
+}*/

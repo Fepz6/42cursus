@@ -3,31 +3,46 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbondoer <pbondoer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 22:38:35 by pbondoer          #+#    #+#             */
-/*   Updated: 2015/12/02 01:30:27 by pbondoer         ###   ########.fr       */
+/*   Created: 2023/04/22 15:06:10 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/04/26 22:15:37 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t i;
-	size_t j;
+    size_t  i;
+    size_t  j;
 
-	i = 0;
-	j = 0;
-	while (dst[i] && i < size)
-		i++;
-	while (src[j] && (i + j) < (size - 1))
-	{
-		dst[i + j] = src[j];
-		j++;
-	}
-	if (i < size)
-		dst[i + j] = 0;
-	return (i + ft_strlen(src));
+    i = 0;
+    j = 0;
+    while (dst[i] != '\0' && i < size)
+    {
+        i++;
+    }
+    if (i == size)
+    {
+        return (i + strlen(src));
+    }
+    while (src[j] != '\0' && (i + j < size - 1))
+    {
+        dst[i + j] = src[j];
+        j++;
+    }
+    dst[i + j] = '\0';
+    return (i + strlen(src));
 }
+/*int main()
+{
+    char str1[20] = "Hello";
+    char str2[] = " world!";
+    size_t result = ft_strlcat(str1, str2, sizeof(str1));
+
+    printf("A string resultante é: %s\n", str1);
+    printf("O comprimento total da string resultante é: %zu\n", result);
+
+    return 0;
+}*/

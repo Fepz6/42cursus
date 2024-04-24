@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbondoer <pbondoer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fcosta-e <fcosta-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 18:42:59 by pbondoer          #+#    #+#             */
-/*   Updated: 2015/12/02 18:44:03 by pbondoer         ###   ########.fr       */
+/*   Created: 2023/05/16 00:06:30 by fcosta-e          #+#    #+#             */
+/*   Updated: 2023/05/16 00:07:56 by fcosta-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+    write (fd, &c, 1);
 }
